@@ -59,8 +59,8 @@ svg{image-rendering:pixelated}
 .rampg:hover .core,.scene:has(.tag-work:hover,.tag-work:focus-visible) .rampg-work .core,.scene:has(.tag-play:hover,.tag-play:focus-visible) .rampg-play .core{opacity:.6}
 .tag{position:absolute;top:34.26%;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;color:#d1286a;text-decoration:none;font-family:'Pixelify Sans',sans-serif;font-weight:700;font-size:clamp(17px,1.8vw,22px);white-space:nowrap;filter:drop-shadow(0 4px 8px rgba(0,0,0,.35))}
 .tag:hover{color:#6b1036;box-shadow:inset -1px -1px #ffffff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080}
-.tag-work{left:26.47%;transform:translate(-50%,-100%) rotate(8deg)}
-.tag-play{left:73.53%;transform:translate(-50%,-100%) rotate(-8deg)}
+.tag-work{left:19.74%;transform:translate(-50%,-100%) rotate(8deg)}
+.tag-play{left:69.74%;transform:translate(-50%,-100%) rotate(-8deg)}
 .credit{margin:0;font-size:11px;color:#8a2a52;font-family:Tahoma,Verdana,'Segoe UI',sans-serif}
 
 /* ---------- menus (menus.js) ---------- */
