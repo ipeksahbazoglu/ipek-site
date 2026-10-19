@@ -65,12 +65,12 @@ Fonts (Google Fonts):
   - An inline SVG overlays the photo with `viewBox="0 100 1180 578"`,
     `preserveAspectRatio="none"`. Copy both ramp `<g>` groups exactly from
     `home.reference.html` (polygon points are in original image pixels).
-  - **Ramp hover glow** (silver, subtle): each ramp group has 5 layers of the same
-    polygon: reflect (translate y 36, blur 14, stroke 12, max opacity .14), halo
-    (translate y 10, blur 14, fill+stroke, opacity .32), edge (translate y 3, blur 5,
-    stroke 3, opacity .45), core (stroke 1, opacity .6), and a transparent hit area.
+  - **Ramp hover glow** (silver, subtle): each ramp group has 3 layers of the same
+    polygon: reflect (translate y 36, blur 14, stroke 12, max opacity .18), halo
+    (translate y 10, blur 14, fill+stroke, opacity .40), and a transparent hit area.
+    No outline lines: the reference's edge and core layers were removed.
     All layers `mix-blend-mode: screen`, fade in over .5s. Nothing is visible until
-    hover. The edge and core outlines are dashed (`stroke-dasharray: 10 6`); halo and reflect stay solid.
+    hover.
   - Left ramp = **work**, right ramp = **play**. Both ramps link to their page.
   - **Tags** on the photo: raised grey buttons, Pixelify Sans, accent text,
     "work ↘" at `left: 26.47%` rotated 8°, "↙ play" at `left: 73.53%` rotated −8°,
