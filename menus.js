@@ -76,7 +76,7 @@
       dialog.innerHTML =
         '<div class="title98"><span id="about-title">About</span>' +
         '<button class="btn98 raised" type="button" aria-label="Close" data-close><svg width="8" height="7" viewBox="0 0 8 7" shape-rendering="crispEdges" aria-hidden="true"><path d="M0 0h2v1h1v1h2v-1h1v-1h2v1h-1v1h-1v1h-1v1h1v1h1v1h1v1h-2v-1h-1v-1h-2v1h-1v1h-2v-1h1v-1h1v-1h1v-1h-1v-1h-1v-1h-1z" fill="#000000"/></svg></button></div>' +
-        '<div class="dialog-body"><svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M5 2h6v1h2v2h1v6h-1v2h-2v1H5v-1H3v-2H2V5h1V3h2z" fill="#d1286a"/><path d="M5 6h2v2H5zM9 6h2v2H9z" fill="#ffffff"/></svg>' +
+        '<div class="dialog-body"><svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M7 4h6v1H7zM6 5h8v2H6zM5 7h8v2H5zM4 9h8v1H4zM3 10h8v1H3zM2 11h8v1H2zM2 12h7v1H2zM1 13h6v1H1zM1 14h4v1H1zM2 15h2v1H2z" fill="#e8202a"/><path d="M12 4h1v1h-1zM13 5h1v2h-1zM12 7h1v2h-1zM11 9h1v1h-1zM10 10h1v1h-1zM9 11h1v1H9zM8 12h1v1H8zM6 13h1v1H6zM4 14h1v1H4zM3 15h1v1H3z" fill="#9b111e"/><path d="M7 5h1v2H7zM6 7h1v2H6zM5 9h1v1H5zM4 10h1v1H4z" fill="#ff9a9a"/><path d="M8 3h5v1H8zM11 1h1v2h-1zM12 0h1v1h-1z" fill="#2f9e44"/><path d="M12 3h1v1h-1z" fill="#1e6b2e"/></svg>' +
         '<div><b>İpek\'s corner of the internet</b><br>Made by hand, 2026.<br>Background ideas from teppy\'s layouts.<br>Penguin Pool photo © RIBA Library Photographs Collection.</div></div>' +
         '<div class="dialog-foot"><button class="okbtn raised" type="button" data-close>OK</button></div>';
       dialog.addEventListener('click', function (e) {

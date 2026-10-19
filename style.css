@@ -38,11 +38,11 @@ svg{image-rendering:pixelated}
 .tb[aria-current="page"]{background:#d6d6d6;font-weight:700;box-shadow:inset -1px -1px #ffffff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080}
 .groove{width:2px;height:34px;margin:0 4px;box-shadow:inset 1px 0 #808080,inset -1px 0 #ffffff}
 .clock{margin-left:auto;display:inline-flex;align-items:center;height:44px;padding:0 14px;font-size:14px;color:#000000}
+.clock-time{font:13px Tahoma,Verdana,'Segoe UI',sans-serif;color:#000000}
 
 /* ---------- home ---------- */
 .home .main{max-width:1180px}
-.tiles{display:flex;gap:4px;margin:0}
-.tiles > span{width:clamp(28px,3.2vw,44px);aspect-ratio:1;display:flex;align-items:center;justify-content:center;color:#d1286a;font-family:'Pixelify Sans',sans-serif;font-weight:700;font-size:clamp(18px,2.2vw,28px);line-height:1}
+.wintitle{display:flex;align-items:center;gap:4px;margin:0 auto 0 3px;color:#ffffff;font:700 12px Tahoma,Verdana,'Segoe UI',sans-serif;white-space:nowrap}
 .photo{margin-top:2px;padding:2px}
 .scene{position:relative;width:100%;aspect-ratio:1180 / 578;overflow:hidden;background:#2a0a10}
 .scene img{position:absolute;left:0;top:-17.30%;width:100%;height:117.30%;filter:grayscale(1) contrast(1.1);image-rendering:auto}
@@ -55,8 +55,8 @@ svg{image-rendering:pixelated}
 .rampg:hover .reflect,.scene:has(.tag-work:hover,.tag-work:focus-visible) .rampg-work .reflect,.scene:has(.tag-play:hover,.tag-play:focus-visible) .rampg-play .reflect{opacity:.24}
 .tag{position:absolute;top:34.26%;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;color:#d1286a;text-decoration:none;font-family:'Pixelify Sans',sans-serif;font-weight:700;font-size:clamp(17px,1.8vw,22px);white-space:nowrap;filter:drop-shadow(0 4px 8px rgba(0,0,0,.35))}
 .tag:hover{color:#6b1036;box-shadow:inset -1px -1px #ffffff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080}
-.tag-work{left:19.74%;transform:translate(-50%,-100%) rotate(8deg)}
-.tag-play{left:69.74%;transform:translate(-50%,-100%) rotate(-8deg)}
+.tag-work{left:15.85%;transform:translate(-50%,-100%) rotate(8deg)}
+.tag-play{left:73.6%;transform:translate(-50%,-100%) rotate(-8deg)}
 .credit{margin:0;font-size:11px;color:#8a2a52;font-family:Tahoma,Verdana,'Segoe UI',sans-serif}
 
 /* ---------- menus (menus.js) ---------- */
