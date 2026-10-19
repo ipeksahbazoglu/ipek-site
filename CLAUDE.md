@@ -66,8 +66,8 @@ Fonts (Google Fonts):
     `preserveAspectRatio="none"`. Copy both ramp `<g>` groups exactly from
     `home.reference.html` (polygon points are in original image pixels).
   - **Ramp hover glow** (silver, subtle): each ramp group has 3 layers of the same
-    polygon: reflect (translate y 36, blur 14, stroke 12, max opacity .18), halo
-    (translate y 10, blur 14, fill+stroke, opacity .40), and a transparent hit area.
+    polygon: reflect (translate y 36, blur 14, stroke 12, max opacity .24), halo
+    (translate y 10, blur 14, fill+stroke, opacity .50), and a transparent hit area.
     No outline lines: the reference's edge and core layers were removed.
     All layers `mix-blend-mode: screen`, fade in over .5s. Nothing is visible until
     hover.
