@@ -1,0 +1,73 @@
+/* İpek's corner of the internet: shared styles */
+
+/* ---------- base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0}
+body{background:#ff8fb8}
+a{color:#a01d52}
+a:hover{color:#6b1036}
+:focus-visible{outline:2px dotted #6b1036;outline-offset:2px}
+
+/* ---------- desktop ---------- */
+.desk{position:relative;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:#ff8fb8 url(assets/bg-dither.png) center / cover no-repeat;image-rendering:pixelated;font-family:'Pixelify Sans',sans-serif;color:#6b1036}
+.main{flex:1;width:100%;margin:0 auto;padding:36px 24px 28px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+svg{image-rendering:pixelated}
+
+/* ---------- bevels ---------- */
+.raised{background:#c0c0c0;box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #ffffff,inset -2px -2px #808080,inset 2px 2px #dfdfdf}
+.sunken{box-shadow:inset -1px -1px #ffffff,inset 1px 1px #808080,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a}
+.pressed{box-shadow:inset -1px -1px #ffffff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080}
+
+/* ---------- windows ---------- */
+.win98{background:#c0c0c0;padding:3px;font-family:Tahoma,Verdana,'Segoe UI',sans-serif;box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px #808080,inset 2px 2px #ffffff,0 16px 34px rgba(160,20,80,.35)}
+.title98{display:flex;align-items:center;justify-content:flex-end;height:22px;padding:0 3px;background:linear-gradient(90deg,#e0457b,#f2b9cc)}
+.title98 .ctrls{display:flex}
+.btn98{width:16px;height:14px;display:flex;align-items:center;justify-content:center;padding:0;border:0;text-decoration:none}
+.btn98.close{margin-left:2px}
+.statusbar{display:flex;gap:2px;margin-top:2px}
+.field98{padding:2px 6px;box-shadow:inset -1px -1px #dfdfdf,inset 1px 1px #808080;font-size:11px;color:#000000}
+.field98.grow{flex:1}
+
+/* ---------- taskbar ---------- */
+.taskbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px;padding:4px;background:#c0c0c0;box-shadow:inset 0 1px #dfdfdf,inset 0 2px #ffffff;font-family:'Pixelify Sans',sans-serif}
+.tb{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 12px;color:#000000;text-decoration:none;font-weight:500;font-size:15px}
+.tb:hover{color:#d1286a}
+.tb:active{box-shadow:inset -1px -1px #ffffff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080}
+.tb-home{font-weight:700}
+.tb-folder{min-width:150px}
+.tb[aria-current="page"]{background:#d6d6d6;font-weight:700;box-shadow:inset -1px -1px #ffffff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080}
+.groove{width:2px;height:34px;margin:0 4px;box-shadow:inset 1px 0 #808080,inset -1px 0 #ffffff}
+.clock{margin-left:auto;display:inline-flex;align-items:center;height:44px;padding:0 14px;font-size:14px;color:#000000}
+
+/* ---------- home ---------- */
+.home .main{max-width:1180px}
+.tiles{display:flex;gap:4px;margin:0}
+.tiles > span{width:clamp(28px,3.2vw,44px);aspect-ratio:1;display:flex;align-items:center;justify-content:center;color:#d1286a;font-family:'Pixelify Sans',sans-serif;font-weight:700;font-size:clamp(18px,2.2vw,28px);line-height:1}
+.photo{margin-top:2px;padding:2px}
+.scene{position:relative;width:100%;aspect-ratio:1180 / 578;overflow:hidden;background:#2a0a10}
+.scene img{position:absolute;left:0;top:-17.30%;width:100%;height:117.30%;filter:grayscale(1) contrast(1.1);image-rendering:auto}
+.scene svg{position:absolute;inset:0;width:100%;height:100%}
+.hit{fill:transparent;stroke:none;pointer-events:all;cursor:pointer}
+.neon{opacity:0;transition:opacity .5s ease;pointer-events:none;mix-blend-mode:screen}
+.halo{fill:#efe6ec;stroke:#f7f2f6;stroke-width:8}
+.reflect{fill:none;stroke:#eadde5;stroke-width:12}
+.edge{fill:none;stroke:#f5eef3;stroke-width:3}
+.core{fill:none;stroke:#ffffff;stroke-width:1}
+.rampg:hover .halo,.scene:has(.tag-work:hover,.tag-work:focus-visible) .rampg-work .halo,.scene:has(.tag-play:hover,.tag-play:focus-visible) .rampg-play .halo{opacity:.32}
+.rampg:hover .reflect,.scene:has(.tag-work:hover,.tag-work:focus-visible) .rampg-work .reflect,.scene:has(.tag-play:hover,.tag-play:focus-visible) .rampg-play .reflect{opacity:.14}
+.rampg:hover .edge,.scene:has(.tag-work:hover,.tag-work:focus-visible) .rampg-work .edge,.scene:has(.tag-play:hover,.tag-play:focus-visible) .rampg-play .edge{opacity:.45}
+.rampg:hover .core,.scene:has(.tag-work:hover,.tag-work:focus-visible) .rampg-work .core,.scene:has(.tag-play:hover,.tag-play:focus-visible) .rampg-play .core{opacity:.6}
+.tag{position:absolute;top:34.26%;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;color:#d1286a;text-decoration:none;font-family:'Pixelify Sans',sans-serif;font-weight:700;font-size:clamp(17px,1.8vw,22px);white-space:nowrap;filter:drop-shadow(0 4px 8px rgba(0,0,0,.35))}
+.tag:hover{color:#6b1036;box-shadow:inset -1px -1px #ffffff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080}
+.tag-work{left:26.47%;transform:translate(-50%,-100%) rotate(8deg)}
+.tag-play{left:73.53%;transform:translate(-50%,-100%) rotate(-8deg)}
+.credit{margin:0;font-size:11px;color:#8a2a52;font-family:Tahoma,Verdana,'Segoe UI',sans-serif}
+
+/* ---------- phones ---------- */
+@media (max-width:600px){
+  .main{padding:20px 16px 20px}
+  .tag{padding:0 10px;font-size:15px}
+  .tb{padding:0 10px;font-size:14px}
+  .tb-folder{min-width:0;flex:1}
+  .groove{display:none}
+}

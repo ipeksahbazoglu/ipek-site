@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Work</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&amp;family=Fraunces:opsz,wght@9..144,700&amp;family=Instrument+Serif:ital@0;1&amp;family=DM+Serif+Display&amp;family=Space+Grotesk:wght@700&amp;family=Syne:wght@700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffa8c8}
+a{color:#a01d52}a:hover{color:#6b1036}
+.desk{position:relative}
+.scene img{image-rendering:auto}
+.desk.bg-tile{background:#2a0a10 url(/_blob/e9c4a02b1d25119a93494fd1386ba425) repeat;background-size:32px 32px;image-rendering:pixelated}
+.desk.bg-faces{background:#ffc2d8 url(/_blob/ab853f975fff59dc0ab89f47cde483b0) repeat;background-size:64px 64px;image-rendering:pixelated}
+.desk.bg-dither{background:#ff8fb8 url(/_blob/b14b0f9d12d35bc2e4fee035e8bf299b) center / cover no-repeat;image-rendering:pixelated}
+.desk.bg-desktop{background:#4f1a2c}
+.icons{position:absolute;left:18px;top:28px;display:flex;flex-direction:column;gap:18px;z-index:1}
+.icon{display:flex;flex-direction:column;align-items:center;gap:4px;width:84px;padding:4px;color:#ffffff;text-decoration:none;font-size:13px;text-align:center}
+.icon:hover span,.icon:focus-visible span{background:#d1286a;outline:1px dotted #ffffff}
+.icon svg{image-rendering:pixelated}
+.desk.bg-grid{background-color:#2a0a10;background-image:linear-gradient(rgba(244,166,184,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(244,166,184,.12) 1px,transparent 1px);background-size:24px 24px}
+.raised{background:#c0c0c0;box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #ffffff,inset -2px -2px #808080,inset 2px 2px #dfdfdf}
+.sunken{box-shadow:inset -1px -1px #ffffff,inset 1px 1px #808080,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a}
+.tiles{display:flex;flex:none;flex-wrap:nowrap;column-gap:22px;row-gap:6px;margin:0}
+@media (max-width:760px){.tiles{flex-wrap:wrap}}
+.word{display:flex;flex:none;gap:4px}
+.word > span{width:clamp(28px,3.2vw,44px);aspect-ratio:1;display:flex;align-items:center;justify-content:center;color:#d1286a;font-family:'Pixelify Sans',sans-serif;font-weight:700;font-size:clamp(18px,2.2vw,28px);line-height:1}
+.win98{background:#c0c0c0;padding:3px;font-family:Tahoma,'Segoe UI',sans-serif;box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px #808080,inset 2px 2px #ffffff,0 16px 34px rgba(160,20,80,.35)}
+.title98{display:flex;align-items:center;justify-content:flex-end;height:22px;padding:0 3px;background:linear-gradient(90deg,#e0457b,#f2b9cc)}
+.btn98{width:16px;height:14px;display:flex;align-items:center;justify-content:center;padding:0}
+.field98{padding:2px 6px;box-shadow:inset -1px -1px #dfdfdf,inset 1px 1px #808080;font-size:11px;color:#000000}
+.hit{fill:transparent;stroke:none;pointer-events:all;cursor:pointer}
+.neon{opacity:0;transition:opacity .5s ease;pointer-events:none;mix-blend-mode:screen}
+.halo{fill:#efe6ec;stroke:#f7f2f6;stroke-width:8}
+.reflect{fill:none;stroke:#eadde5;stroke-width:12}
+.edge{fill:none;stroke:#f5eef3;stroke-width:3}
+.core{fill:none;stroke:#ffffff;stroke-width:1}
+.rampg:hover .halo,.scene:has(.tag-work:hover) .rampg-work .halo,.scene:has(.tag-play:hover) .rampg-play .halo{opacity:.32}
+.rampg:hover .reflect,.scene:has(.tag-work:hover) .rampg-work .reflect,.scene:has(.tag-play:hover) .rampg-play .reflect{opacity:.14}
+.rampg:hover .edge,.scene:has(.tag-work:hover) .rampg-work .edge,.scene:has(.tag-play:hover) .rampg-play .edge{opacity:.45}
+.rampg:hover .core,.scene:has(.tag-work:hover) .rampg-work .core,.scene:has(.tag-play:hover) .rampg-play .core{opacity:.6}
+.tag{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;color:#d1286a;text-decoration:none;font-family:'Pixelify Sans',sans-serif;font-weight:700;font-size:clamp(17px,1.8vw,22px);white-space:nowrap;filter:drop-shadow(0 4px 8px rgba(0,0,0,.35))}
+.tag:hover{color:#6b1036;box-shadow:inset -1px -1px #ffffff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080}
+.taskbar{display:flex;align-items:center;gap:4px;padding:4px;background:#c0c0c0;box-shadow:inset 0 1px #dfdfdf,inset 0 2px #ffffff;font-family:'Pixelify Sans',sans-serif}
+.tb{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 12px;color:#000000;text-decoration:none;font-weight:500;font-size:15px;box-sizing:border-box}
+.tb:hover{color:#d1286a}
+.tb:active{box-shadow:inset -1px -1px #ffffff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080}
+.page{max-width:820px;margin:0 auto}
+.doc{background:#ffffff;color:#1a0a0f;height:640px;overflow-y:auto;font-family:Verdana,Tahoma,sans-serif;font-size:14px;line-height:1.6}
+.doc::-webkit-scrollbar{width:16px}
+.doc::-webkit-scrollbar-track{background:#dfdfdf}
+.doc::-webkit-scrollbar-thumb{background:#c0c0c0;box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #ffffff,inset -2px -2px #808080,inset 2px 2px #dfdfdf}
+.doc h2{font-family:'Pixelify Sans',sans-serif;font-weight:700;font-size:20px;color:#d1286a;margin:36px 0 14px;padding-bottom:6px;border-bottom:2px solid #e9c9d3}
+.role{display:grid;grid-template-columns:150px minmax(0,1fr);gap:4px 24px;padding:14px 0;border-bottom:1px dotted #d9b8c4}
+.role:last-child{border-bottom:none}
+.role ul{margin:6px 0 0;padding-left:18px}
+.role li{margin:4px 0}
+.when{color:#6b5a60;font-size:13px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;color:#000000;text-decoration:none;font-family:Tahoma,'Segoe UI',sans-serif;font-size:13px;box-sizing:border-box}
+.btn:hover{color:#d1286a}
+.btn:active{box-shadow:inset -1px -1px #ffffff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080}
+.menu98{display:flex;gap:2px;padding:2px 0;font-size:12px;color:#000000}
+.menu98{position:relative;z-index:21;font-family:Tahoma,'Segoe UI',sans-serif}
+.mwrap{position:relative}
+.mbtn{font:inherit;font-size:12px;color:#000000;background:none;border:0;padding:4px 9px;min-height:26px;cursor:pointer}
+.mbtn:first-letter{text-decoration:underline}
+.mbtn:hover{box-shadow:inset -1px -1px #808080,inset 1px 1px #ffffff}
+.mbtn[aria-expanded="true"]{box-shadow:inset 1px 1px #808080,inset -1px -1px #ffffff}
+.drop{position:absolute;top:100%;left:0;min-width:210px;display:flex;flex-direction:column;background:#c0c0c0;padding:3px;box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px #808080,inset 2px 2px #ffffff,2px 2px 0 rgba(0,0,0,.25);z-index:22}
+.item{display:flex;align-items:center;min-height:28px;padding:0 22px;color:#000000;text-decoration:none;font:12px Tahoma,'Segoe UI',sans-serif;background:none;border:0;text-align:left;cursor:pointer;white-space:nowrap}
+.item:hover,.item:focus-visible{background:#d1286a;color:#ffffff;outline:none}
+.sep{margin:3px 2px;border-top:1px solid #808080;border-bottom:1px solid #ffffff}
+.shield{position:fixed;inset:0;z-index:20}
+.dialog{position:fixed;left:50%;top:45%;transform:translate(-50%,-50%);width:min(380px,90vw);z-index:30}
+.okbtn{min-width:90px;min-height:32px;font:12px Tahoma,'Segoe UI',sans-serif;color:#000000;border:0;cursor:pointer}
+.okbtn:active{box-shadow:inset -1px -1px #ffffff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080}
+.view-list{flex-direction:column !important;flex-wrap:nowrap !important;align-content:stretch !important;justify-content:flex-start !important;gap:2px !important;padding:12px !important}
+.view-list .big{flex-direction:row;width:auto;gap:12px;padding:6px 10px;text-align:left}
+.view-list .big svg{width:32px;height:32px}
+.big{display:flex;flex-direction:column;align-items:center;gap:8px;width:150px;padding:10px;color:#1a0a0f;text-decoration:none;font-family:Tahoma,'Segoe UI',sans-serif;font-size:13px;text-align:center}
+.big:hover .lbl,.big:focus-visible .lbl{background:#d1286a;color:#ffffff;outline:1px dotted #1a0a0f}
+.big svg{image-rendering:pixelated}
+.close98{text-decoration:none}
+</style>
+</helmet>
+<div class="desk bg-dither" style="min-height: 980px; display: flex; flex-direction: column; font-family: 'Pixelify Sans', sans-serif; color: #6b1036">
+  <sc-if value="{{anyOpen}}" hint-placeholder-val="{{ false }}">
+    <div class="shield" onClick="{{closeAll}}"></div>
+  </sc-if>
+  <sc-if value="{{aboutOpen}}" hint-placeholder-val="{{ false }}">
+    <div class="win98 dialog" role="dialog" aria-label="About this site">
+      <div class="title98" style="justify-content: space-between; padding-left: 6px; color: #ffffff; font-size: 12px; font-weight: 700"><span>About</span><button class="btn98 raised" type="button" aria-label="Close" onClick="{{closeAbout}}" style="border: 0; cursor: pointer"><svg width="8" height="7" viewBox="0 0 8 7" shape-rendering="crispEdges" aria-hidden="true"><path d="M0 0h2v1h1v1h2v-1h1v-1h2v1h-1v1h-1v1h-1v1h1v1h1v1h1v1h-2v-1h-1v-1h-2v1h-1v1h-2v-1h1v-1h1v-1h1v-1h-1v-1h-1v-1h-1z" fill="#000000"></path></svg></button></div>
+      <div style="display: flex; gap: 16px; padding: 18px 16px 10px; font-size: 12px; color: #000000; line-height: 1.6">
+        <svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true" style="flex: none"><path d="M5 2h6v1h2v2h1v6h-1v2h-2v1H5v-1H3v-2H2V5h1V3h2z" fill="#d1286a"></path><path d="M5 6h2v2H5zM9 6h2v2H9z" fill="#ffffff"></path></svg>
+        <div><b>İpek's corner of the internet</b><br>Made by hand, 2026.<br>Background ideas from teppy's layouts.<br>Penguin Pool photo © RIBA Library Photographs Collection.</div>
+      </div>
+      <div style="display: flex; justify-content: center; padding: 6px 0 12px"><button class="okbtn raised" type="button" onClick="{{closeAbout}}">OK</button></div>
+    </div>
+  </sc-if>
+  <div style="flex: 1; width: 100%; padding: 36px 24px 28px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center">
+    <div class="win98 page" style="width: 100%">
+      <div class="title98">
+        <div style="display: flex">
+          <span class="btn98 raised" aria-hidden="true"><svg width="6" height="8" viewBox="0 0 6 8" shape-rendering="crispEdges"><rect x="0" y="6" width="6" height="2" fill="#000000"></rect></svg></span>
+          <span class="btn98 raised" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 9 9" shape-rendering="crispEdges"><rect x="0.5" y="0.5" width="8" height="8" fill="none" stroke="#000000"></rect><rect x="0" y="0" width="9" height="2" fill="#000000"></rect></svg></span>
+          <a class="btn98 raised close98" href="Penguin.dc.html" aria-label="Close" style="margin-left: 2px"><svg width="8" height="7" viewBox="0 0 8 7" shape-rendering="crispEdges" aria-hidden="true"><path d="M0 0h2v1h1v1h2v-1h1v-1h2v1h-1v1h-1v1h-1v1h1v1h1v1h1v1h-2v-1h-1v-1h-2v1h-1v1h-2v-1h1v-1h1v-1h1v-1h-1v-1h-1v-1h-1z" fill="#000000"></path></svg></a>
+        </div>
+      </div>
+      <nav class="menu98" aria-label="Menu" style="display: flex; gap: 2px; padding: 2px 0">
+        <div class="mwrap">
+          <button class="mbtn" type="button" aria-haspopup="true" aria-expanded="{{FileExp}}" onClick="{{toggleFile}}">File</button>
+          <sc-if value="{{FileOpen}}" hint-placeholder-val="{{ false }}">
+            <div class="drop" role="menu">
+            <a class="item" href="https://github.com/ipeksahbazoglu" target="_blank" rel="noopener" onClick="{{closeAll}}">Open GitHub ↗</a>
+            <a class="item" href="mailto:ipeksahbazoglu@gmail.com" onClick="{{closeAll}}">Email me…</a>
+            <div class="sep"></div>
+            <a class="item" href="Penguin.dc.html" onClick="{{closeAll}}">Close</a>
+            </div>
+          </sc-if>
+        </div>
+        <div class="mwrap">
+          <button class="mbtn" type="button" aria-haspopup="true" aria-expanded="{{EditExp}}" onClick="{{toggleEdit}}">Edit</button>
+          <sc-if value="{{EditOpen}}" hint-placeholder-val="{{ false }}">
+            <div class="drop" role="menu">
+            <button class="item" type="button" onClick="{{copyEmail}}">Copy email address</button>
+            <button class="item" type="button" onClick="{{copyLinkedIn}}">Copy LinkedIn link</button>
+            </div>
+          </sc-if>
+        </div>
+        <div class="mwrap">
+          <button class="mbtn" type="button" aria-haspopup="true" aria-expanded="{{ViewExp}}" onClick="{{toggleView}}">View</button>
+          <sc-if value="{{ViewOpen}}" hint-placeholder-val="{{ false }}">
+            <div class="drop" role="menu">
+            <a class="item" href="#experience" onClick="{{closeAll}}">Experience</a>
+            <a class="item" href="#education" onClick="{{closeAll}}">Education</a>
+            <a class="item" href="#portfolio" onClick="{{closeAll}}">Portfolio</a>
+            <div class="sep"></div>
+            <a class="item" href="Play98.dc.html" onClick="{{closeAll}}">Play window</a>
+            </div>
+          </sc-if>
+        </div>
+        <div class="mwrap">
+          <button class="mbtn" type="button" aria-haspopup="true" aria-expanded="{{HelpExp}}" onClick="{{toggleHelp}}">Help</button>
+          <sc-if value="{{HelpOpen}}" hint-placeholder-val="{{ false }}">
+            <div class="drop" role="menu">
+            <button class="item" type="button" onClick="{{openAbout}}">About this site</button>
+            </div>
+          </sc-if>
+        </div>
+      </nav>
+      <div class="sunken" style="padding: 2px">
+        <div class="doc">
+          <div style="padding: 40px 48px 56px">
+            <h1 style="margin: 0; font-family: {{nameFont}}; font-weight: {{nameWeight}}; font-style: {{nameStyle}}; font-size: {{nameSize}}; line-height: 1.1; color: #1a0a0f">İpek Şahbazoğlu</h1>
+            <p style="margin: 8px 0 22px; color: #4a3a40">Still learning about machines learning. Meanwhile, I productionise models for business problems and build tools for my own minor confuddles.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px">
+              <a class="btn raised" href="https://github.com/ipeksahbazoglu" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M2 2h12v12H2z" fill="#1a0a0f"></path><path d="M4 5l3 3-3 3M8 11h4" fill="none" stroke="#ffffff" stroke-width="1.5"></path></svg>GitHub ↗</a>
+              <a class="btn raised" href="https://www.linkedin.com/in/ipeksahbazoglu/" target="_blank" rel="noopener">LinkedIn ↗</a>
+              <a class="btn raised" href="https://medium.com/@ipeksahbazoglu" target="_blank" rel="noopener">Medium ↗</a>
+              <a class="btn raised" href="mailto:ipeksahbazoglu@gmail.com">email me</a>
+            </div>
+
+            <h2 id="experience">experience</h2>
+            <div class="role">
+              <span class="when">Oct 2024 – now</span>
+              <div><b>Technical Product Owner, Machine Learning</b> · Jaguar Land Rover<ul><li>Built a next-best-action model from scratch in PyTorch using adversarial inverse reinforcement learning, choosing among 3,000+ actions across 500–1,000-step sessions.</li><li>Learned the reward from real user journeys instead of hand-designing it, validated offline and with a live A/B test, then took it to production.</li></ul></div>
+            </div>
+            <div class="role">
+              <span class="when">Mar 2024 – Oct 2024</span>
+              <div><b>Machine Learning Engineer, NLP Research</b> · Jaguar Land Rover<ul><li>Built multi-agent LLM prototypes for in-vehicle assistants in LangGraph, with tool calling across OpenAI, Google and Anthropic models.</li><li>Built a RAG proof of concept (embeddings, Chroma, LangChain) and a framework for benchmarking bias in LLM outputs.</li></ul></div>
+            </div>
+            <div class="role">
+              <span class="when">Sep 2023 – Mar 2024</span>
+              <div><b>Data Scientist, Commercial Digital Experience</b> · Jaguar Land Rover<ul><li>Built automated data pipelines in BigQuery, orchestrated with Airflow on Cloud Composer, to ingest, validate and transform multi-source data.</li><li>Deployed a time-series forecasting model in production, with features generated and predictions delivered automatically through Airflow.</li></ul></div>
+            </div>
+            <div class="role">
+              <span class="when">Nov 2022 – Dec 2022</span>
+              <div><b>Machine Learning Engineer Intern</b> · Vela Partners<ul><li>Trained and evaluated knowledge graph embedding models for link prediction on a graph of start-ups and investors.</li><li>Built an automated ETL pipeline that expanded the graph with web-scraped, semi-structured data.</li></ul></div>
+            </div>
+            <div class="role">
+              <span class="when">Jun 2022 – Oct 2022</span>
+              <div><b>Business Analyst Intern</b> · Amazon (Amazon Logistics)<ul><li>Built a Prophet time-series model capturing seasonality, holiday effects and trend changes, backtested against a linear regression baseline.</li><li>Built ETL pipelines consolidating several data lakes into one consistent source for downstream forecasting.</li></ul></div>
+            </div>
+
+            <h2 id="education">education</h2>
+            <div class="role">
+              <span class="when">2019 – 2023</span>
+              <div><b>MEng Engineering Science</b> · University of Oxford (Magdalen College)<br><span>Thesis on the robustness of graph neural networks against adversarial attacks; awarded the Claymond's Dole Exhibition.</span></div>
+            </div>
+
+            <h2 id="portfolio">portfolio</h2>
+            <div class="role">
+              <span class="when">python · llm agents · mcp</span>
+              <div><b>Cryptic Crossword Agent</b> · <a href="https://github.com/ipeksahbazoglu/cryptic-crossword-agent" target="_blank" rel="noopener" style="color: #d1286a">repo ↗</a><br><span>Cryptic clues → a tiered solver that tries code first and calls an LLM agent with tools only when needed → no answer is "confirmed" until code has verified its parse.</span></div>
+            </div>
+            <p style="margin: 20px 0 0"><a class="btn raised" href="https://github.com/ipeksahbazoglu" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M2 2h12v12H2z" fill="#1a0a0f"></path><path d="M4 5l3 3-3 3M8 11h4" fill="none" stroke="#ffffff" stroke-width="1.5"></path></svg>see everything on GitHub ↗</a></p>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 2px; margin-top: 2px">
+        <span class="field98" style="flex: 1" aria-live="polite">{{status}}</span>
+        <span class="field98">work</span>
+      </div>
+    </div>
+  </div>
+  <nav class="taskbar" aria-label="Site">
+    <a class="tb raised" href="Penguin.dc.html" style="font-weight: 700"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M5 2h6v1h2v2h1v6h-1v2h-2v1H5v-1H3v-2H2V5h1V3h2z" fill="#d1286a"></path><path d="M5 6h2v2H5zM9 6h2v2H9z" fill="#ffffff"></path></svg>İpek Şahbazoğlu</a>
+    <span aria-hidden="true" style="width: 2px; height: 34px; margin: 0 4px; box-shadow: inset 1px 0 #808080, inset -1px 0 #ffffff"></span>
+    <a class="tb raised" href="Work98.dc.html" style="min-width: 150px; box-shadow: inset -1px -1px #ffffff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080; background: #d6d6d6; font-weight: 700" aria-current="page"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 3h5l1 2h8v9H1z" fill="#ffa3c4"></path><path d="M1 3h5l1 2h8v1H1z" fill="#d1286a"></path></svg>work</a>
+    <a class="tb raised" href="Play98.dc.html" style="min-width: 150px"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 3h5l1 2h8v9H1z" fill="#ffa3c4"></path><path d="M1 3h5l1 2h8v1H1z" fill="#d1286a"></path></svg>play</a>
+    <span class="sunken" style="margin-left: auto; display: inline-flex; align-items: center; height: 40px; padding: 0 14px; font-size: 14px; color: #000000; box-sizing: border-box">© 2026</span>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"nameFont":{"editor":"enum","options":["Fraunces","Instrument Serif","DM Serif Display","Space Grotesk","Syne"],"default":"Fraunces"},"$preview":{"width":1440,"height":980}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { open: null, about: false, msg: null, view: 'icons' };
+  }
+  menuVals(defaultMsg) {
+    const o = this.state.open;
+    const t = (m) => () => this.setState({ open: o === m ? null : m });
+    const copy = (text, label) => () => {
+      const done = (ok) => this.setState({ open: null, msg: ok ? label + ' copied to clipboard' : 'Could not copy: ' + text });
+      try { navigator.clipboard.writeText(text).then(() => done(true), () => done(false)); } catch (e) { done(false); }
+    };
+    return {
+      FileOpen: o === 'File', EditOpen: o === 'Edit', ViewOpen: o === 'View', HelpOpen: o === 'Help',
+      FileExp: String(o === 'File'), EditExp: String(o === 'Edit'), ViewExp: String(o === 'View'), HelpExp: String(o === 'Help'),
+      toggleFile: t('File'), toggleEdit: t('Edit'), toggleView: t('View'), toggleHelp: t('Help'),
+      anyOpen: o !== null,
+      closeAll: () => this.setState({ open: null }),
+      copyEmail: copy('ipeksahbazoglu@gmail.com', 'Email address'),
+      copyLinkedIn: copy('https://www.linkedin.com/in/ipeksahbazoglu/', 'LinkedIn link'),
+      aboutOpen: this.state.about,
+      openAbout: () => this.setState({ open: null, about: true }),
+      closeAbout: () => this.setState({ about: false }),
+      status: this.state.msg || defaultMsg
+    };
+  }
+  renderVals() {
+    const f = this.props.nameFont ?? 'Fraunces';
+    const spec = {
+      'Fraunces': ["'Fraunces', serif", 700, 'normal', '38px'],
+      'Instrument Serif': ["'Instrument Serif', serif", 400, 'italic', '46px'],
+      'DM Serif Display': ["'DM Serif Display', serif", 400, 'normal', '42px'],
+      'Space Grotesk': ["'Space Grotesk', sans-serif", 700, 'normal', '36px'],
+      'Syne': ["'Syne', sans-serif", 700, 'normal', '36px']
+    }[f] || ["'Fraunces', serif", 700, 'normal', '38px'];
+    return Object.assign(this.menuVals('scroll for experience, education and portfolio'), { nameFont: spec[0], nameWeight: spec[1], nameStyle: spec[2], nameSize: spec[3] });
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homepage A: penguin pool</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffa8c8}
+a{color:#a01d52}a:hover{color:#6b1036}
+.desk{position:relative}
+.scene img{image-rendering:auto}
+.desk.bg-tile{background:#2a0a10 url(/_blob/e9c4a02b1d25119a93494fd1386ba425) repeat;background-size:32px 32px;image-rendering:pixelated}
+.desk.bg-faces{background:#ffc2d8 url(/_blob/ab853f975fff59dc0ab89f47cde483b0) repeat;background-size:64px 64px;image-rendering:pixelated}
+.desk.bg-dither{background:#ff8fb8 url(/_blob/b14b0f9d12d35bc2e4fee035e8bf299b) center / cover no-repeat;image-rendering:pixelated}
+.desk.bg-desktop{background:#4f1a2c}
+.icons{position:absolute;left:18px;top:28px;display:flex;flex-direction:column;gap:18px;z-index:1}
+.icon{display:flex;flex-direction:column;align-items:center;gap:4px;width:84px;padding:4px;color:#ffffff;text-decoration:none;font-size:13px;text-align:center}
+.icon:hover span,.icon:focus-visible span{background:#d1286a;outline:1px dotted #ffffff}
+.icon svg{image-rendering:pixelated}
+.desk.bg-grid{background-color:#2a0a10;background-image:linear-gradient(rgba(244,166,184,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(244,166,184,.12) 1px,transparent 1px);background-size:24px 24px}
+.raised{background:#c0c0c0;box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #ffffff,inset -2px -2px #808080,inset 2px 2px #dfdfdf}
+.sunken{box-shadow:inset -1px -1px #ffffff,inset 1px 1px #808080,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a}
+.tiles{display:flex;flex:none;flex-wrap:nowrap;column-gap:22px;row-gap:6px;margin:0}
+@media (max-width:760px){.tiles{flex-wrap:wrap}}
+.word{display:flex;flex:none;gap:4px}
+.word > span{width:clamp(28px,3.2vw,44px);aspect-ratio:1;display:flex;align-items:center;justify-content:center;color:#d1286a;font-family:'Pixelify Sans',sans-serif;font-weight:700;font-size:clamp(18px,2.2vw,28px);line-height:1}
+.win98{background:#c0c0c0;padding:3px;font-family:Tahoma,'Segoe UI',sans-serif;box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px #808080,inset 2px 2px #ffffff,0 16px 34px rgba(160,20,80,.35)}
+.title98{display:flex;align-items:center;justify-content:flex-end;height:22px;padding:0 3px;background:linear-gradient(90deg,#e0457b,#f2b9cc)}
+.btn98{width:16px;height:14px;display:flex;align-items:center;justify-content:center;padding:0}
+.field98{padding:2px 6px;box-shadow:inset -1px -1px #dfdfdf,inset 1px 1px #808080;font-size:11px;color:#000000}
+.hit{fill:transparent;stroke:none;pointer-events:all;cursor:pointer}
+.neon{opacity:0;transition:opacity .5s ease;pointer-events:none;mix-blend-mode:screen}
+.halo{fill:#efe6ec;stroke:#f7f2f6;stroke-width:8}
+.reflect{fill:none;stroke:#eadde5;stroke-width:12}
+.edge{fill:none;stroke:#f5eef3;stroke-width:3}
+.core{fill:none;stroke:#ffffff;stroke-width:1}
+.rampg:hover .halo,.scene:has(.tag-work:hover) .rampg-work .halo,.scene:has(.tag-play:hover) .rampg-play .halo{opacity:.32}
+.rampg:hover .reflect,.scene:has(.tag-work:hover) .rampg-work .reflect,.scene:has(.tag-play:hover) .rampg-play .reflect{opacity:.14}
+.rampg:hover .edge,.scene:has(.tag-work:hover) .rampg-work .edge,.scene:has(.tag-play:hover) .rampg-play .edge{opacity:.45}
+.rampg:hover .core,.scene:has(.tag-work:hover) .rampg-work .core,.scene:has(.tag-play:hover) .rampg-play .core{opacity:.6}
+.tag{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;color:#d1286a;text-decoration:none;font-family:'Pixelify Sans',sans-serif;font-weight:700;font-size:clamp(17px,1.8vw,22px);white-space:nowrap;filter:drop-shadow(0 4px 8px rgba(0,0,0,.35))}
+.tag:hover{color:#6b1036;box-shadow:inset -1px -1px #ffffff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080}
+.taskbar{display:flex;align-items:center;gap:4px;padding:4px;background:#c0c0c0;box-shadow:inset 0 1px #dfdfdf,inset 0 2px #ffffff;font-family:'Pixelify Sans',sans-serif}
+.tb{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 12px;color:#000000;text-decoration:none;font-weight:500;font-size:15px;box-sizing:border-box}
+.tb:hover{color:#d1286a}
+.tb:active{box-shadow:inset -1px -1px #ffffff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080}
+</style>
+</helmet>
+<div class="desk {{bgClass}}" style="min-height: 980px; display: flex; flex-direction: column; font-family: 'Pixelify Sans', sans-serif; color: #6b1036">
+  <sc-if value="{{showIcons}}" hint-placeholder-val="{{ false }}">
+    <nav class="icons" aria-label="Desktop">
+      <a class="icon" href="#work"><svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 3h5l1 2h8v9H1z" fill="#ffa3c4"></path><path d="M1 3h5l1 2h8v1H1z" fill="#d1286a"></path><path d="M1 13h14v1H1z" fill="#a01d52"></path></svg><span>work</span></a>
+      <a class="icon" href="#play"><svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 3h5l1 2h8v9H1z" fill="#ffa3c4"></path><path d="M1 3h5l1 2h8v1H1z" fill="#d1286a"></path><path d="M1 13h14v1H1z" fill="#a01d52"></path></svg><span>play</span></a>
+      <a class="icon" href="#cv"><svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M3 1h7l3 3v11H3z" fill="#ffffff"></path><path d="M10 1v3h3" fill="#c0c0c0"></path><path d="M5 6h6v1H5zM5 8h6v1H5zM5 10h6v1H5zM5 12h4v1H5z" fill="#d1286a"></path><path d="M3 15h10v1H3z" fill="#808080"></path></svg><span>cv.txt</span></a>
+      <a class="icon" href="#art"><svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 2h14v12H1z" fill="#c0c0c0"></path><path d="M2 3h12v10H2z" fill="#f4d6df"></path><path d="M2 11l3-4 3 3 2-2 4 4v1H2z" fill="#d1286a"></path><path d="M10 4h2v2h-2z" fill="#e8789a"></path></svg><span>my art</span></a>
+    </nav>
+  </sc-if>
+  <div style="flex: 1; width: 100%; max-width: 1180px; margin: 0 auto; padding: 36px 24px 28px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; gap: 14px">
+
+
+    <header style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 20px">
+      <h1 class="tiles" aria-label="İpek"><span class="word"><span class="raised">İ</span><span class="raised">P</span><span class="raised">E</span><span class="raised">K</span></span></h1>
+    </header>
+
+    <div class="win98">
+      <div class="title98">
+        <div aria-hidden="true" style="display: flex">
+          <span class="btn98 raised"><svg width="6" height="8" viewBox="0 0 6 8" shape-rendering="crispEdges"><rect x="0" y="6" width="6" height="2" fill="#000000"></rect></svg></span>
+          <span class="btn98 raised"><svg width="9" height="9" viewBox="0 0 9 9" shape-rendering="crispEdges"><rect x="0.5" y="0.5" width="8" height="8" fill="none" stroke="#000000"></rect><rect x="0" y="0" width="9" height="2" fill="#000000"></rect></svg></span>
+          <span class="btn98 raised" style="margin-left: 2px"><svg width="8" height="7" viewBox="0 0 8 7" shape-rendering="crispEdges"><path d="M0 0h2v1h1v1h2v-1h1v-1h2v1h-1v1h-1v1h-1v1h1v1h1v1h1v1h-2v-1h-1v-1h-2v1h-1v1h-2v-1h1v-1h1v-1h1v-1h-1v-1h-1v-1h-1z" fill="#000000"></path></svg></span>
+        </div>
+      </div>
+      <div class="sunken" style="margin-top: 2px; padding: 2px">
+        <div class="scene" style="position: relative; width: 100%; aspect-ratio: {{cropAspect}}; overflow: hidden; background: #2a0a10">
+          <img src="/_blob/f46769bad406832ab73bb87ea5c8c3cf" alt="Lubetkin's penguin pool at London Zoo: two concrete ramps spiral down into the water, penguins standing along them" style="position: absolute; left: 0; top: {{imgTop}}; width: 100%; height: {{imgHeight}}; filter: {{imgFilter}}">
+          <div style="position: absolute; inset: 0; background: #f07a98; mix-blend-mode: multiply; opacity: {{pinkOpacity}}"></div>
+          <div style="position: absolute; inset: 0; background: #3d0614; mix-blend-mode: screen; opacity: {{redOpacity}}"></div>
+      <svg viewBox="{{viewBox}}" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%">
+        <defs>
+          <filter id="neonGlow" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="5"></feGaussianBlur></filter>
+          <filter id="softGlow" x="-15%" y="-40%" width="130%" height="200%"><feGaussianBlur stdDeviation="14"></feGaussianBlur></filter>
+        </defs>
+        <g class="rampg rampg-work">
+          <polygon class="neon reflect" points="0,297 200,319 400,349 500,365 560,377 640,391 720,396 790,405 828,428 834,452 818,472 700,512 500,560 300,605 140,642 118,630 250,580 450,536 660,497 760,470 790,452 780,432 740,418 680,410 620,405 560,397 480,391 400,377 200,343 0,326" transform="translate(0 36)" filter="url(#softGlow)"></polygon>
+          <polygon class="neon halo" points="0,297 200,319 400,349 500,365 560,377 640,391 720,396 790,405 828,428 834,452 818,472 700,512 500,560 300,605 140,642 118,630 250,580 450,536 660,497 760,470 790,452 780,432 740,418 680,410 620,405 560,397 480,391 400,377 200,343 0,326" transform="translate(0 10)" filter="url(#softGlow)"></polygon>
+          <polygon class="neon edge" points="0,297 200,319 400,349 500,365 560,377 640,391 720,396 790,405 828,428 834,452 818,472 700,512 500,560 300,605 140,642 118,630 250,580 450,536 660,497 760,470 790,452 780,432 740,418 680,410 620,405 560,397 480,391 400,377 200,343 0,326" transform="translate(0 3)" filter="url(#neonGlow)"></polygon>
+          <polygon class="neon core" points="0,297 200,319 400,349 500,365 560,377 640,391 720,396 790,405 828,428 834,452 818,472 700,512 500,560 300,605 140,642 118,630 250,580 450,536 660,497 760,470 790,452 780,432 740,418 680,410 620,405 560,397 480,391 400,377 200,343 0,326"></polygon>
+          <polygon class="hit" points="0,297 200,319 400,349 500,365 560,377 640,391 720,396 790,405 828,428 834,452 818,472 700,512 500,560 300,605 140,642 118,630 250,580 450,536 660,497 760,470 790,452 780,432 740,418 680,410 620,405 560,397 480,391 400,377 200,343 0,326"></polygon>
+        </g>
+        <g class="rampg rampg-play">
+          <polygon class="neon reflect" points="1045,299 900,318 780,344 700,362 600,384 520,396 440,404 300,421 185,437 178,444 200,452 300,452 440,440 560,420 660,397 780,358 900,334 1045,314" transform="translate(0 36)" filter="url(#softGlow)"></polygon>
+          <polygon class="neon halo" points="1045,299 900,318 780,344 700,362 600,384 520,396 440,404 300,421 185,437 178,444 200,452 300,452 440,440 560,420 660,397 780,358 900,334 1045,314" transform="translate(0 10)" filter="url(#softGlow)"></polygon>
+          <polygon class="neon edge" points="1045,299 900,318 780,344 700,362 600,384 520,396 440,404 300,421 185,437 178,444 200,452 300,452 440,440 560,420 660,397 780,358 900,334 1045,314" transform="translate(0 3)" filter="url(#neonGlow)"></polygon>
+          <polygon class="neon core" points="1045,299 900,318 780,344 700,362 600,384 520,396 440,404 300,421 185,437 178,444 200,452 300,452 440,440 560,420 660,397 780,358 900,334 1045,314"></polygon>
+          <polygon class="hit" points="1045,299 900,318 780,344 700,362 600,384 520,396 440,404 300,421 185,437 178,444 200,452 300,452 440,440 560,420 660,397 780,358 900,334 1045,314"></polygon>
+        </g>
+      </svg>
+          <a class="tag tag-work raised" href="Work98.dc.html" style="position: absolute; left: 26.47%; top: {{tagTop}}; transform: translate(-50%, -100%) rotate(8deg)">work ↘</a>
+          <a class="tag tag-play raised" href="Play98.dc.html" style="position: absolute; left: 73.53%; top: {{tagTop}}; transform: translate(-50%, -100%) rotate(-8deg)">↙ play</a>
+        </div>
+      </div>
+      <div style="display: flex; gap: 2px; margin-top: 2px">
+        <span class="field98" style="flex: 1">hover a ramp · work ↘ · ↙ play</span>
+        <span class="field98">Lubetkin &amp; Tecton, 1934</span>
+      </div>
+    </div>
+
+    <p style="margin: 0; font-size: 11px; color: #8a2a52; font-family: Tahoma, 'Segoe UI', sans-serif">Penguin Pool, London Zoo (Berthold Lubetkin &amp; Tecton, 1934) · photo © RIBA Library Photographs Collection</p>
+  </div>
+
+  <nav class="taskbar" aria-label="Site">
+    <a class="tb raised" href="#" style="font-weight: 700"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M5 2h6v1h2v2h1v6h-1v2h-2v1H5v-1H3v-2H2V5h1V3h2z" fill="#d1286a"></path><path d="M5 6h2v2H5zM9 6h2v2H9z" fill="#ffffff"></path></svg>İpek Şahbazoğlu</a>
+    <span aria-hidden="true" style="width: 2px; height: 34px; margin: 0 4px; box-shadow: inset 1px 0 #808080, inset -1px 0 #ffffff"></span>
+    <a class="tb raised" href="Work98.dc.html" style="min-width: 150px"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 3h5l1 2h8v9H1z" fill="#ffa3c4"></path><path d="M1 3h5l1 2h8v1H1z" fill="#d1286a"></path></svg>work</a>
+    <a class="tb raised" href="Play98.dc.html" style="min-width: 150px"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 3h5l1 2h8v9H1z" fill="#ffa3c4"></path><path d="M1 3h5l1 2h8v1H1z" fill="#d1286a"></path></svg>play</a>
+    <span class="sunken" style="margin-left: auto; display: inline-flex; align-items: center; height: 40px; padding: 0 14px; font-size: 14px; color: #000000; box-sizing: border-box">© 2026</span>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;bg&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;faces&quot;,&quot;dithered gradient&quot;,&quot;grid&quot;,&quot;tile pattern&quot;,&quot;desktop + icons&quot;],&quot;default&quot;:&quot;dithered gradient&quot;},&quot;crop&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;none&quot;,&quot;light&quot;,&quot;tight&quot;],&quot;default&quot;:&quot;light&quot;},&quot;tint&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;black &amp; white&quot;,&quot;soft rose&quot;,&quot;pink duotone&quot;,&quot;sepia&quot;],&quot;default&quot;:&quot;black &amp; white&quot;},&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:980}}">
+class Component extends DCLogic {
+  renderVals() {
+    const t = this.props.tint ?? 'black & white';
+    const looks = {
+      'black & white': ['grayscale(1) contrast(1.1)', 0, 0],
+      'soft rose': ['grayscale(1) contrast(1.1) brightness(1.05)', 0.4, 0.5],
+      'pink duotone': ['grayscale(1) contrast(1.15) brightness(1.05)', 1, 1],
+      'sepia': ['grayscale(1) sepia(0.6) contrast(1.05)', 0, 0]
+    };
+    const l = looks[t] || looks['black & white'];
+    const y0 = { none: 0, light: 100, tight: 200 }[this.props.crop ?? 'light'] ?? 100;
+    const h = 678 - y0;
+    const pct = (v) => (v * 100).toFixed(2) + '%';
+    const bg = this.props.bg ?? 'dithered gradient';
+    return {
+      bgClass: { 'faces': 'bg-faces', 'grid': 'bg-grid', 'tile pattern': 'bg-tile', 'dithered gradient': 'bg-dither', 'desktop + icons': 'bg-desktop' }[bg] || 'bg-dither',
+      showIcons: bg === 'desktop + icons',
+      imgFilter: l[0], pinkOpacity: l[1], redOpacity: l[2],
+      cropAspect: '1180 / ' + h,
+      imgTop: pct(-y0 / h), imgHeight: pct(678 / h),
+      viewBox: '0 ' + y0 + ' 1180 ' + h,
+      tagTop: pct((298 - y0) / h)
+    };
+  }
+}
+</script>
+</body>
+</html>
