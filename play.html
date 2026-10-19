@@ -13,11 +13,12 @@
 <script src="clock.js" defer></script>
 <script src="menus.js" defer></script>
 </head>
-<body>
+<body class="play">
 <div class="desk">
   <main class="main">
     <div class="win98 explorer">
       <div class="title98">
+        <span class="wintitle m-only"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M7 4h6v1H7zM6 5h8v2H6zM5 7h8v2H5zM4 9h8v1H4zM3 10h8v1H3zM2 11h8v1H2zM2 12h7v1H2zM1 13h6v1H1zM1 14h4v1H1zM2 15h2v1H2z" fill="#e8202a"/><path d="M12 4h1v1h-1zM13 5h1v2h-1zM12 7h1v2h-1zM11 9h1v1h-1zM10 10h1v1h-1zM9 11h1v1H9zM8 12h1v1H8zM6 13h1v1H6zM4 14h1v1H4zM3 15h1v1H3z" fill="#9b111e"/><path d="M7 5h1v2H7zM6 7h1v2H6zM5 9h1v1H5zM4 10h1v1H4z" fill="#ff9a9a"/><path d="M8 3h5v1H8zM11 1h1v2h-1zM12 0h1v1h-1z" fill="#2f9e44"/><path d="M12 3h1v1h-1z" fill="#1e6b2e"/></svg>play</span>
         <div class="ctrls">
           <span class="btn98 raised" aria-hidden="true"><svg width="6" height="8" viewBox="0 0 6 8" shape-rendering="crispEdges"><rect x="0" y="6" width="6" height="2" fill="#000000"/></svg></span>
           <span class="btn98 raised" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 9 9" shape-rendering="crispEdges"><rect x="0.5" y="0.5" width="8" height="8" fill="none" stroke="#000000"/><rect x="0" y="0" width="9" height="2" fill="#000000"/></svg></span>
@@ -64,7 +65,7 @@
         <span class="sunken"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 3h5l1 2h8v9H1z" fill="#ffa3c4"/><path d="M1 3h5l1 2h8v1H1z" fill="#d1286a"/></svg>C:\İpek\play</span>
       </div>
 
-      <div class="sunken" style="padding:2px">
+      <div class="sunken fill">
         <nav class="pane" aria-label="Play" data-pane>
           <a class="big" href="https://www.instagram.com/balfasulye/" target="_blank" rel="noopener"><svg width="64" height="64" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M5 2h6v1h2v1h1v2h1v4h-1v1h-3v1h-1v2h-1v1H5v-1H3v-1H2v-2H1V6h1V4h1V3h2z" fill="#f4d6df"/><path d="M4 5h2v2H4z" fill="#d1286a"/><path d="M8 4h2v2H8z" fill="#e8789a"/><path d="M11 6h2v2h-2z" fill="#a01d52"/><path d="M4 9h2v2H4z" fill="#c0c0c0"/><path d="M8 9h2v2H8z" fill="#2a0a10"/></svg><span class="lbl">observatory</span><span class="on">on Instagram ↗</span></a>
           <a class="big" href="https://letterboxd.com/ipeksahbazoglu/" target="_blank" rel="noopener"><svg width="64" height="64" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 3h14v10H1z" fill="#1a0a0f"/><path d="M2 4h1v1H2zM5 4h1v1H5zM8 4h1v1H8zM11 4h1v1h-1zM13 4h1v1h-1zM2 11h1v1H2zM5 11h1v1H5zM8 11h1v1H8zM11 11h1v1h-1zM13 11h1v1h-1z" fill="#ffffff"/><path d="M2 6h5v4H2zM9 6h5v4H9z" fill="#ffa3c4"/></svg><span class="lbl">films</span><span class="on">on Letterboxd ↗</span></a>
@@ -80,7 +81,7 @@
   </main>
 
   <nav class="taskbar" aria-label="Site">
-    <a class="tb tb-home raised" href="index.html"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M7 4h6v1H7zM6 5h8v2H6zM5 7h8v2H5zM4 9h8v1H4zM3 10h8v1H3zM2 11h8v1H2zM2 12h7v1H2zM1 13h6v1H1zM1 14h4v1H1zM2 15h2v1H2z" fill="#e8202a"/><path d="M12 4h1v1h-1zM13 5h1v2h-1zM12 7h1v2h-1zM11 9h1v1h-1zM10 10h1v1h-1zM9 11h1v1H9zM8 12h1v1H8zM6 13h1v1H6zM4 14h1v1H4zM3 15h1v1H3z" fill="#9b111e"/><path d="M7 5h1v2H7zM6 7h1v2H6zM5 9h1v1H5zM4 10h1v1H4z" fill="#ff9a9a"/><path d="M8 3h5v1H8zM11 1h1v2h-1zM12 0h1v1h-1z" fill="#2f9e44"/><path d="M12 3h1v1h-1z" fill="#1e6b2e"/></svg>İpek Şahbazoğlu</a>
+    <a class="tb tb-home raised" href="index.html"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M7 4h6v1H7zM6 5h8v2H6zM5 7h8v2H5zM4 9h8v1H4zM3 10h8v1H3zM2 11h8v1H2zM2 12h7v1H2zM1 13h6v1H1zM1 14h4v1H1zM2 15h2v1H2z" fill="#e8202a"/><path d="M12 4h1v1h-1zM13 5h1v2h-1zM12 7h1v2h-1zM11 9h1v1h-1zM10 10h1v1h-1zM9 11h1v1H9zM8 12h1v1H8zM6 13h1v1H6zM4 14h1v1H4zM3 15h1v1H3z" fill="#9b111e"/><path d="M7 5h1v2H7zM6 7h1v2H6zM5 9h1v1H5zM4 10h1v1H4z" fill="#ff9a9a"/><path d="M8 3h5v1H8zM11 1h1v2h-1zM12 0h1v1h-1z" fill="#2f9e44"/><path d="M12 3h1v1h-1z" fill="#1e6b2e"/></svg><span class="tb-label">İpek Şahbazoğlu</span></a>
     <span class="groove" aria-hidden="true"></span>
     <a class="tb tb-folder raised" href="work.html"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 3h5l1 2h8v9H1z" fill="#ffa3c4"/><path d="M1 3h5l1 2h8v1H1z" fill="#d1286a"/></svg>work</a>
     <a class="tb tb-folder raised" href="play.html" aria-current="page"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 3h5l1 2h8v9H1z" fill="#ffa3c4"/><path d="M1 3h5l1 2h8v1H1z" fill="#d1286a"/></svg>play</a>

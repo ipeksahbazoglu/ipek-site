@@ -119,16 +119,67 @@ svg{image-rendering:pixelated}
 .view-list .big{flex-direction:row;width:auto;gap:12px;padding:6px 10px;text-align:left}
 .view-list .big svg{width:32px;height:32px}
 
+.fill{padding:2px}
+.mob-nav{display:flex;gap:4px;margin-top:4px}
+.mob-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;color:#d1286a;text-decoration:none;font:700 22px 'Pixelify Sans',sans-serif}
+.mob-btn:active{box-shadow:inset -1px -1px #ffffff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080}
+
+/* ---------- desktop / phone switches ---------- */
+@media (min-width:601px){
+  .m-only{display:none !important}
+}
+
 /* ---------- phones ---------- */
+@keyframes ramp-glow{0%,100%{opacity:0}20%,30%{opacity:var(--on)}50%{opacity:0}}
 @media (max-width:600px){
+  .d-only{display:none !important}
   .main{padding:20px 16px 20px}
-  .tag{padding:0 10px;font-size:15px}
-  .tb{padding:0 10px;font-size:14px}
-  .tb-folder{min-width:0;flex:1}
-  .groove{display:none}
   .drop{min-width:180px}
-  .doc{height:65vh;height:65dvh;min-height:360px}
-  .doc-inner{padding:24px 20px 40px}
+
+  /* taskbar */
+  .taskbar{flex-wrap:nowrap}
+  .groove{display:none}
+  .tb{padding:0 9px;font-size:14px}
+  .tb-home{flex:1;min-width:0}
+  .tb-home svg,.tb-folder svg{flex:none}
+  .tb-label{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .tb-folder{min-width:0}
+  .clock{padding:0 10px}
+  .clock-time{font-size:12px}
+
+  /* home: 4:3 close-up of the ramps (image x 290–823, y 260–660) */
+  .home .main{padding:10px}
+  .scene{aspect-ratio:4 / 3}
+  .scene img{left:-54.41%;top:-65%;width:221.39%;height:169.5%}
+  .scene svg{left:-54.41%;top:-40%;width:221.39%;height:144.5%}
+  .tag{display:none}
+  .credit{font-size:10px}
+  .halo{--on:.50}
+  .reflect{--on:.24}
+  .rampg .neon{animation:ramp-glow 6s ease-in-out infinite}
+  .rampg-play .neon{animation-delay:3s}
+
+  /* work and play: maximised window */
+  .work .desk,.play .desk{height:100vh;height:100dvh}
+  .work .main,.play .main{padding:0;min-height:0}
+  .page,.explorer{max-width:none;flex:1;min-height:0;display:flex;flex-direction:column}
+  .fill{flex:1;min-height:0;display:flex;flex-direction:column}
+  .doc{flex:1;height:auto;min-height:0}
+  .doc-inner{padding:20px 18px 40px}
   .doc h1{font-size:30px}
   .role{grid-template-columns:minmax(0,1fr)}
+  .links .btn{flex:1 1 calc(50% - 4px);justify-content:center;min-height:44px}
+
+  /* play: full-width list rows */
+  .pane,.pane.view-list{flex:1;min-height:0;overflow-y:auto;flex-direction:column;flex-wrap:nowrap;justify-content:flex-start;align-content:stretch;gap:0;padding:0}
+  .big,.view-list .big{display:grid;grid-template-columns:40px minmax(0,1fr);align-content:center;column-gap:14px;width:auto;min-height:64px;padding:8px 16px;text-align:left;border-bottom:1px dotted #d9b8c4}
+  .big svg,.view-list .big svg{grid-row:1 / 3;width:40px;height:40px;align-self:center}
+  .big .lbl{font-weight:700}
+  .big:hover .lbl,.big:focus-visible .lbl{background:none;color:inherit;outline:none}
+  .big:focus-visible{outline:2px dotted #6b1036;outline-offset:-3px}
+  .big:active{background:#d1286a}
+  .big:active .lbl,.big:active .on{color:#ffffff}
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce){
+  .rampg .neon{animation:none}
 }
