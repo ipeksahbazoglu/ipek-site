@@ -1,0 +1,33 @@
+name: Deploy to Neocities
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-to-neocities
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Only the site itself goes up: not CLAUDE.md, design-reference/ or git files.
+      - name: Collect site files
+        run: |
+          mkdir _site
+          cp index.html work.html play.html style.css menus.js _site/
+          cp -r assets _site/
+
+      - name: Deploy to Neocities
+        uses: bcomnes/deploy-to-neocities@v3
+        with:
+          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
+          dist_dir: _site
+          cleanup: false
+          neocities_supporter: false
+          preview_before_deploy: true
