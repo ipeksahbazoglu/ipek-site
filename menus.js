@@ -77,7 +77,7 @@
         '<div class="title98"><span id="about-title">About</span>' +
         '<button class="btn98 raised" type="button" aria-label="Close" data-close><svg width="8" height="7" viewBox="0 0 8 7" shape-rendering="crispEdges" aria-hidden="true"><path d="M0 0h2v1h1v1h2v-1h1v-1h2v1h-1v1h-1v1h-1v1h1v1h1v1h1v1h-2v-1h-1v-1h-2v1h-1v1h-2v-1h1v-1h1v-1h1v-1h-1v-1h-1v-1h-1z" fill="#000000"/></svg></button></div>' +
         '<div class="dialog-body"><svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M5 2h6v1h2v2h1v6h-1v2h-2v1H5v-1H3v-2H2V5h1V3h2z" fill="#d1286a"/><path d="M5 6h2v2H5zM9 6h2v2H9z" fill="#ffffff"/></svg>' +
-        '<div><b>Ipek\'s corner of the internet</b><br>Made by hand, 2026.<br>Background ideas from teppy\'s layouts.<br>Penguin Pool photo © RIBA Library Photographs Collection.</div></div>' +
+        '<div><b>İpek\'s corner of the internet</b><br>Made by hand, 2026.<br>Background ideas from teppy\'s layouts.<br>Penguin Pool photo © RIBA Library Photographs Collection.</div></div>' +
         '<div class="dialog-foot"><button class="okbtn raised" type="button" data-close>OK</button></div>';
       dialog.addEventListener('click', function (e) {
         if (e.target.closest('[data-close]')) closeAbout();

@@ -1,4 +1,4 @@
-# Ipek's portfolio site: build brief
+# İpek's portfolio site: build brief
 
 A small personal website styled as a Windows 98 desktop in candy-pink. Three pages:
 a homepage where a photo of Lubetkin's Penguin Pool is the menu (its two ramps are
@@ -46,17 +46,17 @@ Fonts (Google Fonts):
 ## Shared pieces (all three pages)
 
 - **Taskbar**, full width at the bottom of the page: grey bar; first button has a
-  16px pixel face icon + **Ipek Şahbazoğlu** (bold) and links home; a groove divider;
+  16px pixel face icon + **İpek Şahbazoğlu** (bold) and links home; a groove divider;
   **work** and **play** buttons (min-width 150px, folder icons) ; a sunken box on the
   right reading "© 2026". The current page's button looks pressed in (sunken bevel).
 - **Windows** use the frame bevel, the pink title bar with only the _ □ × buttons on
   the right (pixel SVGs in the reference files). × on work/play links back home.
-- Name is spelled **Ipek Şahbazoğlu**: plain I with no dot (not İ), but keep the Turkish Ş and ğ. The design-reference files still say İ; this overrides them.
+- Use the Turkish letters everywhere: **İpek Şahbazoğlu**, with the dotted İ. The one exception is the four name tiles at the top of the homepage, which read **IPEK** with a plain I (no dot).
 
 ## index.html (home)
 
 - Top-left: **IPEK** as four raised grey key tiles (clamp(28px, 3.2vw, 44px) squares,
-  Pixelify Sans 700, accent colour). Only "IPEK" here; full name lives in the taskbar.
+  Pixelify Sans 700, accent colour). Plain I, no dot. Only "IPEK" here; full name lives in the taskbar.
 - Below: one window, centred, max-width 1180px, containing the Penguin Pool photo
   (`assets/penguin-pool.png`, 1180×678, black & white: `filter: grayscale(1) contrast(1.1)`).
   - The top 100px of the photo is cropped off: the visible area is image y 100–678,
@@ -101,7 +101,7 @@ https://github.com/ipeksahbazoglu/cryptic-crossword-agent
 ## play.html
 
 A smaller Explorer-style window (max-width 720px): menu bar, an address bar reading
-`C:\Ipek\play`, a white pane with three big 64px pixel icons (SVGs in
+`C:\İpek\play`, a white pane with three big 64px pixel icons (SVGs in
 `play.reference.html`), status bar "3 object(s)" | "play".
 
 - **observatory** (palette icon) → https://www.instagram.com/balfasulye/
@@ -125,7 +125,7 @@ or pressing Escape closes it. Keyboard accessible (buttons, arrow keys nice-to-h
   pane to rows with 32px icons; current option marked "•") · ─ · Work window.
   Help → About this site.
 - **About dialog**: small centred Windows dialog, title "About", pixel face icon,
-  "Ipek's corner of the internet · Made by hand, 2026 · Background ideas from teppy's
+  "İpek's corner of the internet · Made by hand, 2026 · Background ideas from teppy's
   layouts · Penguin Pool photo © RIBA Library Photographs Collection", OK button.
 
 ## Notes
