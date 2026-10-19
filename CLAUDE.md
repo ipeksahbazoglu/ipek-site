@@ -1,4 +1,4 @@
-# İpek's portfolio site: build brief
+# Ipek's portfolio site: build brief
 
 A small personal website styled as a Windows 98 desktop in candy-pink. Three pages:
 a homepage where a photo of Lubetkin's Penguin Pool is the menu (its two ramps are
@@ -46,17 +46,17 @@ Fonts (Google Fonts):
 ## Shared pieces (all three pages)
 
 - **Taskbar**, full width at the bottom of the page: grey bar; first button has a
-  16px pixel face icon + **İpek Şahbazoğlu** (bold) and links home; a groove divider;
+  16px pixel face icon + **Ipek Şahbazoğlu** (bold) and links home; a groove divider;
   **work** and **play** buttons (min-width 150px, folder icons) ; a sunken box on the
   right reading "© 2026". The current page's button looks pressed in (sunken bevel).
 - **Windows** use the frame bevel, the pink title bar with only the _ □ × buttons on
   the right (pixel SVGs in the reference files). × on work/play links back home.
-- Use the Turkish letters everywhere: İpek Şahbazoğlu.
+- Name is spelled **Ipek Şahbazoğlu**: plain I with no dot (not İ), but keep the Turkish Ş and ğ. The design-reference files still say İ; this overrides them.
 
 ## index.html (home)
 
-- Top-left: **İPEK** as four raised grey key tiles (clamp(28px, 3.2vw, 44px) squares,
-  Pixelify Sans 700, accent colour). Only "İPEK" here; full name lives in the taskbar.
+- Top-left: **IPEK** as four raised grey key tiles (clamp(28px, 3.2vw, 44px) squares,
+  Pixelify Sans 700, accent colour). Only "IPEK" here; full name lives in the taskbar.
 - Below: one window, centred, max-width 1180px, containing the Penguin Pool photo
   (`assets/penguin-pool.png`, 1180×678, black & white: `filter: grayscale(1) contrast(1.1)`).
   - The top 100px of the photo is cropped off: the visible area is image y 100–678,
@@ -70,7 +70,7 @@ Fonts (Google Fonts):
     (translate y 10, blur 14, fill+stroke, opacity .32), edge (translate y 3, blur 5,
     stroke 3, opacity .45), core (stroke 1, opacity .6), and a transparent hit area.
     All layers `mix-blend-mode: screen`, fade in over .5s. Nothing is visible until
-    hover; no dotted outlines.
+    hover. The edge and core outlines are dashed (`stroke-dasharray: 10 6`); halo and reflect stay solid.
   - Left ramp = **work**, right ramp = **play**. Both ramps link to their page.
   - **Tags** on the photo: raised grey buttons, Pixelify Sans, accent text,
     "work ↘" at `left: 26.47%` rotated 8°, "↙ play" at `left: 73.53%` rotated −8°,
@@ -101,7 +101,7 @@ https://github.com/ipeksahbazoglu/cryptic-crossword-agent
 ## play.html
 
 A smaller Explorer-style window (max-width 720px): menu bar, an address bar reading
-`C:\İpek\play`, a white pane with three big 64px pixel icons (SVGs in
+`C:\Ipek\play`, a white pane with three big 64px pixel icons (SVGs in
 `play.reference.html`), status bar "3 object(s)" | "play".
 
 - **observatory** (palette icon) → https://www.instagram.com/balfasulye/
@@ -125,7 +125,7 @@ or pressing Escape closes it. Keyboard accessible (buttons, arrow keys nice-to-h
   pane to rows with 32px icons; current option marked "•") · ─ · Work window.
   Help → About this site.
 - **About dialog**: small centred Windows dialog, title "About", pixel face icon,
-  "İpek's corner of the internet · Made by hand, 2026 · Background ideas from teppy's
+  "Ipek's corner of the internet · Made by hand, 2026 · Background ideas from teppy's
   layouts · Penguin Pool photo © RIBA Library Photographs Collection", OK button.
 
 ## Notes
