@@ -166,5 +166,23 @@ open, hovering another switches to it. Item behaviour comes from data- attribute
 - Credits stay visible: RIBA photo credit on home; teppy credit in the About dialog.
 - Accessibility: real `<a>`/`<button>` elements, alt text on the photo, visible focus,
   text contrast ≥ 4.5:1, touch targets ≥ 44px where practical.
-- On phones: the window goes full width, tags scale with the photo (they're
-  percentage-positioned), taskbar buttons may wrap.
+
+## Phones (max-width: 600px; desktop unchanged)
+
+- `.m-only` / `.d-only` classes switch text and elements between phone and desktop.
+- **Taskbar** stays on one row: the name button stretches and truncates (`.tb-label`),
+  work/play are compact (14px, 9px side padding), the clock is 12px.
+- **Home**: 10px margins, window centred vertically. The photo is a 4:3 close-up of
+  the ramps (image x 290–823, y 260–660): image `left: -54.41%; top: -65%;
+  width: 221.39%; height: 169.5%`. The ramp SVG keeps its desktop viewBox and is
+  positioned to match (`left: -54.41%; top: -40%; width: 221.39%; height: 144.5%`),
+  which is equivalent to `viewBox="290 260 533 400"`. Tags are hidden; a row of two
+  raised buttons (work / play, 56px, Pixelify 22px, 24px folder icons) sits under the
+  photo. The glow plays by itself on a 6s loop (work first, play 3s later; off with
+  `prefers-reduced-motion`). Status bar: "tap a button or a ramp" | "Lubetkin, 1934".
+  Credit line 10px.
+- **Work / play**: the window is maximised (no margins, top of the screen to the
+  taskbar) and its title bar shows the chili + "work" / "play". Work: the document
+  scrolls inside, 20px/18px padding, one-column roles, name 30px, link buttons two
+  per row. Play: full-width rows (40px icon, bold label, grey "on … ↗" line, 64px,
+  dotted dividers, whole row turns `#d1286a` on press).
