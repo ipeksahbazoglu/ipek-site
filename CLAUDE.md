@@ -116,10 +116,11 @@ scrolls inside the window (grey Windows-style scrollbar). Content, in order, is 
 
 - Name (Fraunces 700, ~38px), summary line, then buttons: GitHub ↗, LinkedIn ↗,
   Medium ↗, email me (mailto).
-- **experience** (5 roles), **education**, **portfolio** sections, each heading
+- **experience** (5 roles), **education**, **tech stack** (5 rows: category in the dates
+  column, tools beside it), **portfolio** sections, each heading
   Pixelify Sans in accent with a light pink rule underneath; rows = dates column
-  (150px) + title · company + two bullets. On phones the dates sit above each role.
-- Status bar: "scroll for experience, education and portfolio" | "work".
+  (150px) + title · company + bullets (2–4). On phones the dates sit above each role.
+- Status bar: "scroll for experience, education, tech stack and portfolio" | "work".
 
 Links: GitHub https://github.com/ipeksahbazoglu · LinkedIn
 https://www.linkedin.com/in/ipeksahbazoglu/ · Medium https://medium.com/@ipeksahbazoglu ·
@@ -148,7 +149,7 @@ open, hovering another switches to it. Item behaviour comes from data- attribute
 
 - Work: File → Open GitHub ↗ · Email me… · ─ · Close (home). Edit → Copy email
   address · Copy LinkedIn link (status bar confirms "… copied to clipboard"). View →
-  Experience · Education · Portfolio (scroll the document to that section) · ─ ·
+  Experience · Education · Tech stack · Portfolio (scroll the document to that section) · ─ ·
   Play window. Help → About this site.
 - Play: File → Observatory (Instagram) ↗ · Films (Letterboxd) ↗ · Books (Goodreads) ↗ ·
   ─ · Close. Edit → Copy email address. View → Large Icons / List (switches the icon

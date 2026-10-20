@@ -48,6 +48,7 @@
           <div class="drop" role="menu" hidden>
             <a class="item" role="menuitem" href="#experience" data-scroll="#experience">Experience</a>
             <a class="item" role="menuitem" href="#education" data-scroll="#education">Education</a>
+            <a class="item" role="menuitem" href="#stack" data-scroll="#stack">Tech stack</a>
             <a class="item" role="menuitem" href="#portfolio" data-scroll="#portfolio">Portfolio</a>
             <div class="sep" role="separator"></div>
             <a class="item" role="menuitem" href="play.html">Play window</a>
@@ -65,7 +66,7 @@
         <div class="doc" tabindex="0" aria-label="CV">
           <div class="doc-inner">
             <h1>İpek Şahbazoğlu</h1>
-            <p class="summary">Still learning about machines learning. Meanwhile, I productionise models for business problems and build tools for my own minor confuddles.</p>
+            <p class="summary">Still learning about machines learning. Meanwhile, I productionise models for business problems and build tools for my personal confuddles.</p>
             <div class="links">
               <a class="btn raised" href="https://github.com/ipeksahbazoglu" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M2 2h12v12H2z" fill="#1a0a0f"/><path d="M4 5l3 3-3 3M8 11h4" fill="none" stroke="#ffffff" stroke-width="1.5"/></svg>GitHub ↗</a>
               <a class="btn raised" href="https://www.linkedin.com/in/ipeksahbazoglu/" target="_blank" rel="noopener">LinkedIn ↗</a>
@@ -76,35 +77,57 @@
             <h2 id="experience">experience</h2>
             <div class="role">
               <span class="when">Oct 2024 – now</span>
-              <div><b>Technical Product Owner, Machine Learning</b> · Jaguar Land Rover<ul><li>Built a next-best-action model from scratch in PyTorch using adversarial inverse reinforcement learning, choosing among 3,000+ actions across 500–1,000-step sessions.</li><li>Learned the reward from real user journeys instead of hand-designing it, validated offline and with a live A/B test, then took it to production.</li></ul></div>
+              <div><b>Technical Product Owner, Machine Learning</b> · Jaguar Land Rover<ul><li>Built a reinforcement learning model from scratch in PyTorch that hyper-personalises customers’ web journeys, choosing the next best action from 3,000+ candidates at each step of a session.</li><li>Learned the reward from logged user journeys with adversarial inverse RL, since no reward could be hand-specified. Gated release on offline training-health checks, then a live A/B test before production.</li><li>Built gradient-boosted (XGBoost, LightGBM) and multilevel models of customer engagement, serving real-time insights to ad bidding.</li><li>Upskilling the team through a shared prompt library and code review sessions, plus a lot of translating between models and the people who use them.</li></ul></div>
             </div>
             <div class="role">
               <span class="when">Mar 2024 – Oct 2024</span>
-              <div><b>Machine Learning Engineer, NLP Research</b> · Jaguar Land Rover<ul><li>Built multi-agent LLM prototypes for in-vehicle assistants in LangGraph, with tool calling across OpenAI, Google and Anthropic models.</li><li>Built a RAG proof of concept (embeddings, Chroma, LangChain) and a framework for benchmarking bias in LLM outputs.</li></ul></div>
+              <div><b>Machine Learning Engineer, NLP Research</b> · Jaguar Land Rover<ul><li>Prototyped a multi-agent in-car voice assistant in LangGraph, orchestrating tool-calling agents and comparing OpenAI, Google and Anthropic models.</li><li>Built a RAG proof of concept that embeds unstructured documents into Chroma, with retrieval through LangChain, and designed a framework for benchmarking bias in LLM outputs.</li></ul></div>
             </div>
             <div class="role">
               <span class="when">Sep 2023 – Mar 2024</span>
-              <div><b>Data Scientist, Commercial Digital Experience</b> · Jaguar Land Rover<ul><li>Built automated data pipelines in BigQuery, orchestrated with Airflow on Cloud Composer, to ingest, validate and transform multi-source data.</li><li>Deployed a time-series forecasting model in production, with features generated and predictions delivered automatically through Airflow.</li></ul></div>
+              <div><b>Data Scientist, Commercial Digital Experience</b> · Jaguar Land Rover<ul><li>Built BigQuery ingestion and validation for Google Analytics, finance and marketing data, scheduled as Airflow DAGs on Cloud Composer.</li><li>Shipped a time-series forecasting model for marketing KPIs, with feature generation and batch predictions automated in the same DAGs.</li></ul></div>
             </div>
             <div class="role">
               <span class="when">Nov 2022 – Dec 2022</span>
-              <div><b>Machine Learning Engineer Intern</b> · Vela Partners<ul><li>Trained and evaluated knowledge graph embedding models for link prediction on a graph of start-ups and investors.</li><li>Built an automated ETL pipeline that expanded the graph with web-scraped, semi-structured data.</li></ul></div>
+              <div><b>Machine Learning Engineer Intern</b> · Vela Partners<ul><li>Trained and evaluated knowledge graph embedding models for link prediction between start-ups and investors.</li><li>Wrote an ETL pipeline that scraped semi-structured web data and merged it into the graph.</li></ul></div>
             </div>
             <div class="role">
               <span class="when">Jun 2022 – Oct 2022</span>
-              <div><b>Business Analyst Intern</b> · Amazon (Amazon Logistics)<ul><li>Built a Prophet time-series model capturing seasonality, holiday effects and trend changes, backtested against a linear regression baseline.</li><li>Built ETL pipelines consolidating several data lakes into one consistent source for downstream forecasting.</li></ul></div>
+              <div><b>Business Analyst Intern</b> · Amazon Logistics<ul><li>Forecast shipment damage across Europe with a Prophet model that handles seasonality, holidays and trend changepoints. It beat the existing linear-regression forecast by ~80% in backtesting.</li><li>Built the ETL that consolidated several data lakes into a single source for forecasting and reporting.</li></ul></div>
             </div>
 
             <h2 id="education">education</h2>
             <div class="role">
               <span class="when">2019 – 2023</span>
-              <div><b>MEng Engineering Science</b> · University of Oxford (Magdalen College)<br><span>Thesis on the robustness of graph neural networks against adversarial attacks; awarded the Claymond's Dole Exhibition.</span></div>
+              <div><b>MEng Engineering Science</b> · University of Oxford (Magdalen College)<br><span>Thesis on how well graph neural networks hold up against adversarial attacks. Awarded the Claymond’s Dole Exhibition.</span></div>
+            </div>
+
+            <h2 id="stack">tech stack</h2>
+            <div class="role">
+              <span class="when">Languages</span>
+              <div>Python, Java, SQL</div>
+            </div>
+            <div class="role">
+              <span class="when">ML</span>
+              <div>PyTorch, scikit-learn, XGBoost, LightGBM, Prophet, pandas, NumPy</div>
+            </div>
+            <div class="role">
+              <span class="when">LLMs &amp; agents</span>
+              <div>Anthropic, OpenAI and Gemini APIs (tool use, structured outputs), MCP, LangGraph, LangChain, Chroma</div>
+            </div>
+            <div class="role">
+              <span class="when">Cloud</span>
+              <div>GCP (BigQuery, Vertex AI, Cloud Composer/Airflow), AWS (S3, Lambda)</div>
+            </div>
+            <div class="role">
+              <span class="when">Engineering</span>
+              <div>Git, CI/CD, Docker, pytest, Streamlit, Claude Code</div>
             </div>
 
             <h2 id="portfolio">portfolio</h2>
             <div class="role">
               <span class="when">python · llm agents · mcp</span>
-              <div><b>Cryptic Crossword Agent</b> · <a class="repo" href="https://github.com/ipeksahbazoglu/cryptic-crossword-agent" target="_blank" rel="noopener">repo ↗</a><br><span>Cryptic clues → a tiered solver that tries code first and calls an LLM agent with tools only when needed → no answer is "confirmed" until code has verified its parse.</span></div>
+              <div><b>Cryptic Crossword Agent</b> · <a class="repo" href="https://github.com/ipeksahbazoglu/cryptic-crossword-agent" target="_blank" rel="noopener">repo ↗</a><br><span>A cryptic crossword solver that tries plain code first and only calls an LLM agent (with tools) when it gets stuck. No answer counts as solved until code has checked how the clue breaks down.</span></div>
             </div>
             <p class="more"><a class="btn raised" href="https://github.com/ipeksahbazoglu" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path d="M2 2h12v12H2z" fill="#1a0a0f"/><path d="M4 5l3 3-3 3M8 11h4" fill="none" stroke="#ffffff" stroke-width="1.5"/></svg>see everything on GitHub ↗</a></p>
           </div>
@@ -112,7 +135,7 @@
       </div>
 
       <div class="statusbar">
-        <span class="field98 grow" data-status aria-live="polite">scroll for experience, education and portfolio</span>
+        <span class="field98 grow" data-status aria-live="polite">scroll for experience, education, tech stack and portfolio</span>
         <span class="field98">work</span>
       </div>
     </div>
